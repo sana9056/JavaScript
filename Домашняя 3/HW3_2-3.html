@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset='utf-8'>
+  </head>
+  
+  <body>
+    <script>
+		console.log(' 2 задание:Нужно реализовать функционал подсчета стоимости корзины в зависимости от находящихся в ней товаров.');
+        let basket = [
+            {
+                product: "Prod1",
+                price: 55
+            },
+            {
+                product: "Prod2",
+                price: 34
+			},	
+            {
+                product: "Prod3",
+                price: 27
+            },
+            {
+                product: "Prod4",
+                price: 82
+            }
+        ];
+        let basketPrice = 0;
+        for (let prod of basket){
+            basketPrice += prod.price;
+            console.log("Товар " + prod.product + " стоит: " + prod.price);
+        }
+
+        console.log("Стоимость корзины: " + basketPrice + " у.е.");
+		
+		console.log('3 задание: Организовать массив для хранения товаров;Организовать функцию countBasketPrice, которая будет считать стоимость корзины.');
+        function countBasketPrice(basket) {
+            let anotherBasketPrice = 0;
+            for (let prod of basket){
+                anotherBasketPrice += prod.price;
+            }
+            return anotherBasketPrice;
+        }
+
+        console.log("Стоимость корзины: " + countBasketPrice(basket) + " у.е.");
+    </script>
+  </body>
+</html>
